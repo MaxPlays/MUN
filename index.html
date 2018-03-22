@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MUN</title>
+
+    <link rel="stylesheet" href="css/master.css">
+
+    <meta charset="utf-8">
+    <meta name="description" content="MUN management software">
+    <meta name="keywords" content="MUN, MUN Software">
+    <meta name="author" content="Maximilian Negedly" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <div class="wrapper-started">
+        <h1>MUN - <span class="commitee" id="commitee">UNODC</span> <span class="sessionlbl">Session</span> <span class="sessionlbl" id="session">1</span><br><span class="topic" id="topic">Topic A: Hacking and crime in the dark web</span></h1>
+
+        <div class="content">
+
+          <div class="element-wrapper">
+            Not on Speakers List<p />
+            <select class="notsl list"></select>
+          </div>
+
+          <div class="element-wrapper">
+            Speakers List<p />
+            <select class="sl list"></select>
+          </div>
+
+          <sidebar>
+            <div class="element-wrapper sidebar-element">
+              <div>
+                <div id="timer">
+                  <input type="text" id="minutes-sl" class="timer-unit" value="00">
+                  :
+                  <input type="text" id="seconds-sl" class="timer-unit" value="00">
+                </div>
+                <br>
+                <div id="timer-controls">
+                  <span class="button" id="start-timer-sl">Start</span>
+                  <span class="button" id="reset-timer-sl">Reset</span>
+                </div>
+              </div>
+              <div id="session-controls">
+                <span class="button" id="mc-button">Moderated Caucus</span>
+                <br>
+                <br>
+                <span class="button" id="sc-button">Simple Caucus</span>
+                <br>
+                <br>
+                <span class="button" id="end-session">End session</span>
+              </div>
+            </div>
+            <br>
+
+            <div class="element-wrapper sidebar-element speaking-wrapper">
+              <h3>Speaking Country</h3>
+              <p />
+              <span id="speaking-country">Austria</span>
+              <h3>Warnings</h3>
+              <div id="warnings"></div>
+              <br>
+            </div>
+          </sidebar>
+
+        </div>
+      </div>
+
+    </div>
+  <script src="js/list-behaviour.js" charset="utf-8"></script>
+  <script src="js/timer-sl.js" charset="utf-8"></script>
+  <script src="js/warn.js" charset="utf-8"></script>
+  </body>
+</html>
