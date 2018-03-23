@@ -4,6 +4,7 @@
     <title>MUN</title>
 
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/overlay.css">
 
     <meta charset="utf-8">
     <meta name="description" content="MUN management software">
@@ -13,6 +14,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
+
+    <div class="overlay-wrapper">
+      <div class="overlay-content"></div>
+    </div>
 
     <div class="wrapper">
 
@@ -60,7 +65,7 @@
             <div class="element-wrapper sidebar-element speaking-wrapper">
               <h3>Speaking Delegation</h3>
               <p />
-              <span id="speaking-country">Austria</span>
+              <span id="speaking-country"></span>
               <h3>Warnings</h3>
               <div id="warnings"></div>
               <br>
