@@ -3,7 +3,64 @@
   width: 100%;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
-  display: block;
   position: absolute;
+  animation: fade 0.3s 1 0ms;
   display: none;
+  }
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.overlay-content{
+  margin: auto;
+  width: 60%;
+  height: 40%;
+  background: white;
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 2em;
+  color: #2b2b2b;
+}
+.overlay-header{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  display: inline;
+}
+.overlay-close{
+  float: right;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.7em;
+}
+.ol-timer-wrapper{
+  text-align: center;
+  margin-top: 7%;
+}
+#ol-timer, .ol-timer-unit{
+  font-size: 1.4em;
+}
+.ol-timer-unit{
+  width: 100px;
+  text-align: center;
+  color: #2b2b2b;
+  background: white;
+  border: .5px solid #454444;
+}
+.ol-button{
+  background-color: #39404b;
+  color: #cdcdcd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.7em;
+  transition: background 0.2s;
+  cursor: pointer;
+  user-select: none;
+}
+.ol-button:hover{
+  background-color: #2b313b;
+}
+.ol-red{
+  color: red;
 }

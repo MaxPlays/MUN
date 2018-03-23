@@ -16,9 +16,26 @@
   <body>
 
     <div class="overlay-wrapper">
-      <div class="overlay-content"></div>
+      <div class="overlay-content">
+        <div class="overlay-header"></div>
+        <div class="overlay-close">X</div>
+        <hr>
+        <div class="ol-timer-wrapper">
+          <div id="ol-timer">
+            <input type="text" id="ol-minutes" class="ol-timer-unit" value="00">
+            :
+            <input type="text" id="ol-seconds" class="ol-timer-unit" value="00">
+          </div>
+          <br>
+          <div id="ol-timer-controls">
+            <span class="ol-button" id="ol-start-timer">Start/Pause</span>
+            <span class="ol-button" id="ol-reset-timer">Reset</span>
+          </div>
+        </div>
+      </div>
     </div>
-
+    <br>
+    <br>
     <div class="wrapper">
 
       <div class="wrapper-started">
@@ -79,5 +96,7 @@
   <script src="js/list-behaviour.js" charset="utf-8"></script>
   <script src="js/timer-sl.js" charset="utf-8"></script>
   <script src="js/warn.js" charset="utf-8"></script>
+  <script src="js/timer-ol.js" charset="utf-8"></script>
+  <script src="js/session-controls.js" charset="utf-8"></script>
   </body>
 </html>
