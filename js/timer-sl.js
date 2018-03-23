@@ -1,10 +1,11 @@
-var running = false;
+var running = false, paused = false;
 var setMinutes = 0, setSeconds = 0;
 var interval;
 
 $("#reset-timer-sl").click(function(){
   if(running == true){
     running = false;
+    paused = false;
     window.clearInterval(interval);
     outTime(setMinutes, setSeconds);
     $("#minutes-sl").removeClass("red");
@@ -29,6 +30,10 @@ $("#start-timer-sl").click(function(){
     }else{
       alert("Timer input error");
     }
+  }else if(paused == false){
+    paused = true;
+  }else if(paused == true){
+    paused = false;
   }
 });
 
@@ -40,26 +45,28 @@ function outTime(minutes, seconds){
 }
 
 function run(){
-  var m = parseInt($("#minutes-sl").val());
-  var s = parseInt($("#seconds-sl").val());
-  if(m <= 0 && s <= 0){
-    if(s == -59){
-      m--;
-      s = 0;
+  if(paused == false){
+    var m = parseInt($("#minutes-sl").val());
+    var s = parseInt($("#seconds-sl").val());
+    if(m <= 0 && s <= 0){
+      if(s == -59){
+        m--;
+        s = 0;
+      }else{
+        s--;
+      }
     }else{
-      s--;
+      if(s == 0){
+        m --;
+        s = 59;
+      }else{
+        s --;
+      }
     }
-  }else{
-    if(s == 0){
-      m --;
-      s = 59;
-    }else{
-      s --;
+    if((m < 0 | (m == 0 && s <= 10)) && !$("#minutes-sl").hasClass("red")){
+      $("#minutes-sl").addClass("red");
+      $("#seconds-sl").addClass("red");
     }
+    outTime(m, s);
   }
-  if((m < 0 | (m == 0 && s <= 10)) && !$("#minutes-sl").hasClass("red")){
-    $("#minutes-sl").addClass("red");
-    $("#seconds-sl").addClass("red");
-  }
-  outTime(m, s);
 }
