@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/overlay.css">
+    <link rel="stylesheet" href="css/menu.css">
 
     <meta charset="utf-8">
     <meta name="description" content="MUN management software">
@@ -38,8 +39,35 @@
     <br>
     <div class="wrapper">
 
+      <div class="menu">
+        <h1>WASAMUN - Main Menu</h1>
+        <b>Start a MUN session with the following configuration:</b>
+        <p />
+        <div class="selection">
+          <div class="menu-element" id="menu-committee-wrapper">
+            <label>Committee</label>
+            <p />
+          </div>
+          <div class="menu-element">
+            <label>Topic</label>
+            <p />
+            <input type="radio" name="menu-topic" value="A">Topic A</input>
+            <br>
+            <input type="radio" name="menu-topic" value="B">Topic B</input>
+          </div>
+          <div class="menu-element">
+            <label>Session</label>
+            <p />
+            <input type="number" name="menu-session" value="1" id="menu-session" min="1" step="1">
+          </div>
+        </div>
+        <br>
+        <span class="start-session button">Start session</span>
+        <br>
+      </div>
+
       <div class="wrapper-started">
-        <h1>MUN - <span class="commitee" id="commitee">UNODC</span> <span class="sessionlbl">Session</span> <span class="sessionlbl" id="session">1</span><br><span class="topic" id="topic">Topic A: Hacking and crime in the dark web</span></h1>
+        <h1>WASAMUN - <span class="commitee" id="commitee"></span> <span class="sessionlbl">Session</span> <span class="sessionlbl" id="session"></span><br><span class="topic" id="topic"></span></h1>
 
         <div class="content">
 
@@ -98,5 +126,6 @@
   <script src="js/warn.js" charset="utf-8"></script>
   <script src="js/timer-ol.js" charset="utf-8"></script>
   <script src="js/session-controls.js" charset="utf-8"></script>
+  <script src="js/menu.js" charset="utf-8"></script>
   </body>
 </html>

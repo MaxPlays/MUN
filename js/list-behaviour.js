@@ -1,7 +1,5 @@
 $(document).ready(updateListSize);
 
-fill('[{"name" : "Test 1"}, {"name" : "Test 2"}, {"name" : "Test 3"}, {"name" : "Test 4"}, {"name" : "Test 5"}, {"name" : "Test 6"}]');
-
 $(document).on("click", "option", function(){
   if(this.parentNode.classList.contains("notsl")){
     appendOption("sl", this.text);
@@ -29,10 +27,26 @@ function updateListSize(){
 }
 
 function fill(data){
+  $(".notsl").html("");
+  $(".sl").html("");
+  $("#warnings").html("");
   var json = JSON.parse(data);
   for(var i = 0; i < json.length; i++){
-    appendOption("notsl", json[i].name);
+    var country = json[i].country;
+    var index = json[i].index;
+    var warns = json[i].warns;
+    if(warns > 0){
+      $("#warnings").append('<div class="warning"><div class="warn-country">' + country + '</div>: <div class="warn-amount">' + warns + '</div></div>');
+    }
+    if(index == -1){
+      if(warns < 3){
+        appendOption("notsl", country);
+      }
+    }else{
+      appendOption("sl", country);
+    }
   }
+  updateListSize();
 }
 
 function appendOption(list, text){

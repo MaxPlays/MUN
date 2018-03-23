@@ -1,0 +1,12 @@
+PHP query file: query.php - GET requests
+
+action
+  getCommittees: Get a list of committees
+  getInfo: Get informations about committee and topic
+    committee: Name of the committee
+    topic: Topic number [A | B]
+
+        returns: "name" topic name, "countries" country list along with warns per country and speakers list index (-1 if not in speakers list)
+  save:
+    committee: Name of the committee
+    data: List of data in the following format: [{"country":"country-name", "index":"speakers list index (-1 for not in speakers list)", "warns":"number of warns"}]

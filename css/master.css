@@ -91,3 +91,7 @@ body{
 .red{
   color: red;
 }
+
+.wrapper-started{
+  display: none;
+}

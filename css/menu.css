@@ -1,0 +1,20 @@
+.selection{
+  display: flex;
+}
+.menu-element{
+  margin-right: 50px;
+}
+#menu-session{
+  font-size: 1.1em;
+  border: none;
+  background-color: #23262d;
+  border: none;
+  width: 100px;
+  color: #cbcbcb;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+#menu-session::-webkit-inner-spin-button{
+  display: none;
+}
