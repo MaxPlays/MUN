@@ -51,4 +51,21 @@ function fill(data){
 
 function appendOption(list, text){
   $("." + list).append("<option>" + text + "</option>");
+
+  if(list == "notsl"){
+      var v = document.getElementsByClassName("notsl")[0].querySelectorAll("option");
+      var a = Array();
+      for(var i = 0; i < v.length; i++){
+        a[i] = v[i].innerHTML;
+      }
+      a.sort(function(a, b){
+        if(a < b) return -1;
+        if(b < a) return 1;
+        return 0;
+      });
+      $(".notsl").html("");
+      for(var j = 0; j < a.length; j++){
+        $(".notsl").append("<option>" + a[j] + "</option>");
+      }
+  }
 }
