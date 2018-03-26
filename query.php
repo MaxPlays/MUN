@@ -60,6 +60,58 @@
       }else{
         echo "Error";
       }
+    }else if(strcmp($action, "create") == 0){
+      if(isset($_GET["data"])){
+        $data = json_decode($_GET["data"]);
+
+        $committee = $data->{"committee"};
+        $topicA = $data->{"topicA"};
+        $topicB = $data->{"topicB"};
+        $countries = json_encode($data->{"countries"});
+
+        $stmt = $conn->prepare('SELECT committee FROM wasamun WHERE committee=?;');
+        $stmt->bind_param("s", $committee);
+        $stmt->execute();
+        $stmt->bind_result($result);
+        $stmt->fetch();
+
+        if(strcmp($result, "") == 0){
+          $sstmt = $conn->prepare('INSERT INTO wasamun VALUES(?, ?, ?, ?);');
+          $sstmt->bind_param("ssss", $committee, $topicA, $topicB, $countries);
+          $sstmt->execute();
+          $sstmt->close();
+          echo "success";
+        }else{
+          echo "Error: That committee name is already in use";
+        }
+        $stmt->close();
+      }else{
+        echo "Error";
+      }
+    }else if(strcmp($action, "remove") == 0){
+      if(isset($_GET["name"])){
+        $name = $_GET["name"];
+
+        $stmt = $conn->prepare('DELETE FROM wasamun WHERE committee=?;');
+        $stmt->bind_param("s", $name);
+        $stmt->execute();
+        $stmt->close();
+
+        echo "success";
+      }else{
+        echo "Error";
+      }
+    }else if(strcmp($action, "getTableInfo") == 0){
+      $result = $conn->query("SELECT committee, topicA, topicB FROM wasamun;");
+      $array = array();
+      if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          array_push($array, array("committee" => $row["committee"], "topicA" => $row["topicA"], "topicB" => $row["topicB"]));
+        }
+      }
+      echo json_encode($array);
+    }else{
+      echo "Error";
     }
   }else{
     echo "Error";

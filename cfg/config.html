@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>WASAMUN Config</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="MUN configuration software">
+    <meta name="keywords" content="MUN, MUN Config">
+    <meta name="author" content="Maximilian Negedly" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="config.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>WASAMUN committee config</h2>
+      <div class="table-wrapper">
+        <h3>Current committees</h3>
+        <table>
+          <tr class="table-header">
+            <td class="committee-header">Committee</td>
+            <td>Topic A</td>
+            <td>Topic B</td>
+            <td class="remove-header">Remove</td>
+          </tr>
+        </table>
+      </div>
+      <div class="create-wrapper">
+        <h3 id="toggle">Create new committee [ <span id="toggle-lbl">+</span> ]</h3>
+        <div class="create-options">
+          <div class="text-inputs">
+            <label for="name">Name and topics</label>
+            <p>
+              <input type="text" name="name" placeholder="Name" id="name">
+            </p>
+            <p>
+              <input type="text" name="topica" value="" placeholder="Topic A" id="topica">
+            </p>
+            <p>
+              <input type="text" name="topicb" value="" placeholder="Topic B" id="topicb">
+            </p>
+            <p>
+              <div class="button" id="clear">Clear selection</div>
+            </p>
+            <p>
+              <div class="button" id="create">Create committee</div>
+            </p>
+          </div>
+          <div class="country-inputs">
+            Select all participating countries
+            <p>
+              <div class="country-list">
+                <input type="checkbox" value="Afghanistan">Afghanistan</input>
+                <input type="checkbox" value="Albania">Albania</input>
+                <input type="checkbox" value="Algeria">Algeria</input>
+                <input type="checkbox" value="Andorra">Andorra</input>
+                <input type="checkbox" value="Angola">Angola</input>
+                <input type="checkbox" value="Antigua and Barbuda">Antigua and Barbuda</input>
+                <input type="checkbox" value="Argentina">Argentina</input>
+                <input type="checkbox" value="Armenia">Armenia</input>
+                <input type="checkbox" value="Australia">Australia</input>
+                <input type="checkbox" value="Austria">Austria</input>
+                <input type="checkbox" value="Azerbaijan">Azerbaijan</input> <p />
+                <input type="checkbox" value="Bahamas">Bahamas</input>
+                <input type="checkbox" value="Bahrain">Bahrain</input>
+                <input type="checkbox" value="Bangladesh">Bangladesh</input>
+                <input type="checkbox" value="Barbados">Barbados</input>
+                <input type="checkbox" value="Belarus">Belarus</input>
+                <input type="checkbox" value="Belgium">Belgium</input>
+                <input type="checkbox" value="Belize">Belize</input>
+                <input type="checkbox" value="Benin">Benin</input>
+                <input type="checkbox" value="Bhutan">Bhutan</input>
+                <input type="checkbox" value="Bolivia">Bolivia</input>
+                <input type="checkbox" value="Bosnia and Herzegovina">Bosnia and Herzegovina</input>
+                <input type="checkbox" value="Botswana">Botswana</input>
+                <input type="checkbox" value="Brazil">Brazil</input>
+                <input type="checkbox" value="Brunei Darussalam">Brunei Darussalam</input>
+                <input type="checkbox" value="Bulgaria">Bulgaria</input>
+                <input type="checkbox" value="Burkina Faso">Burkina Faso</input>
+                <input type="checkbox" value="Burundi">Burundi</input> <p />
+                <input type="checkbox" value="Cabo Verde">Cabo Verde</input>
+                <input type="checkbox" value="Cambodia">Cambodia</input>
+                <input type="checkbox" value="Cameroon">Cameroon</input>
+                <input type="checkbox" value="Canada">Canada</input>
+                <input type="checkbox" value="Central African Republic">Central African Republic</input>
+                <input type="checkbox" value="Chad">Chad</input>
+                <input type="checkbox" value="Chile">Chile</input>
+                <input type="checkbox" value="China">China</input>
+                <input type="checkbox" value="Columbia">Columbia</input>
+                <input type="checkbox" value="Comoros">Comoros</input>
+                <input type="checkbox" value="Congo">Congo</input>
+                <input type="checkbox" value="Costa Ric">Costa Rica</input>
+                <input type="checkbox" value="Côte d'Ivoire">Côte d'Ivoire</input>
+                <input type="checkbox" value="Croatia">Croatia</input>
+                <input type="checkbox" value="Cuba">Cuba</input>
+                <input type="checkbox" value="Cyprus">Cyprus</input>
+                <input type="checkbox" value="Czech Republic">Czech Republic</input> <p />
+                <input type="checkbox" value="Democratic People's Republic of Korea">Democratic People's Republic of Korea</input>
+                <input type="checkbox" value="Democratic Republic of the Congo">Democratic Republic of the Congo</input>
+                <input type="checkbox" value="Denmark">Denmark</input>
+                <input type="checkbox" value="Djibouti">Djibouti</input>
+                <input type="checkbox" value="Dominica">Dominica</input>
+                <input type="checkbox" value="Dominican Republic">Dominican Republic</input> <p />
+                <input type="checkbox" value="Ecuador">Ecuador</input>
+                <input type="checkbox" value="Egypt">Egypt</input>
+                <input type="checkbox" value="El Salvador">El Salvador</input>
+                <input type="checkbox" value="Equatorial Guinea">Equatorial Guinea</input>
+                <input type="checkbox" value="Eritrea">Eritrea</input>
+                <input type="checkbox" value="Estonia">Estonia</input>
+                <input type="checkbox" value="Ethiopia">Ethiopia</input> <p />
+                <input type="checkbox" value="Fiji">Fiji</input>
+                <input type="checkbox" value="Finland">Finland</input>
+                <input type="checkbox" value="France">France</input> <p />
+                <input type="checkbox" value="Gabon">Gabon</input>
+                <input type="checkbox" value="Gambia">Gambia</input>
+                <input type="checkbox" value="Georgia">Georgia</input>
+                <input type="checkbox" value="Germany">Germany</input>
+                <input type="checkbox" value="Ghana">Ghana</input>
+                <input type="checkbox" value="Greece">Greece</input>
+                <input type="checkbox" value="Grenada">Grenada</input>
+                <input type="checkbox" value="Guatemala">Guatemala</input>
+                <input type="checkbox" value="Guinea">Guinea</input>
+                <input type="checkbox" value="Guinea-Bissau">Guinea-Bissau</input>
+                <input type="checkbox" value="Guyana">Guyana</input> <p />
+                <input type="checkbox" value="Haiti">Haiti</input>
+                <input type="checkbox" value="Honduras">Honduras</input>
+                <input type="checkbox" value="Hungary">Hungary</input> <p />
+                <input type="checkbox" value="Iceland">Iceland</input>
+                <input type="checkbox" value="India">India</input>
+                <input type="checkbox" value="Indonesia">Indonesia</input>
+                <input type="checkbox" value="Iran">Iran</input>
+                <input type="checkbox" value="Iraq">Iraq</input>
+                <input type="checkbox" value="Ireland">Ireland</input>
+                <input type="checkbox" value="Israel">Israel</input>
+                <input type="checkbox" value="Italy">Italy</input> <p />
+                <input type="checkbox" value="Jamaica">Jamaica</input>
+                <input type="checkbox" value="Japan">Japan</input>
+                <input type="checkbox" value="Jordan">Jordan</input> <p />
+                <input type="checkbox" value="Kazakhstan">Kazakhstan</input>
+                <input type="checkbox" value="Kenya">Kenya</input>
+                <input type="checkbox" value="Kiribati">Kiribati</input>
+                <input type="checkbox" value="Kuwait">Kuwait</input>
+                <input type="checkbox" value="Kyrgyztan">Kyrgyztan</input> <p />
+                <input type="checkbox" value="">Lao People's Democratic Republic</input>
+                <input type="checkbox" value="Lao People's Democratic Republic">Latvia</input>
+                <input type="checkbox" value="Lebanon">Lebanon</input>
+                <input type="checkbox" value="Lesotho">Lesotho</input>
+                <input type="checkbox" value="Liberia">Liberia</input>
+                <input type="checkbox" value="Libya">Libya</input>
+                <input type="checkbox" value="Liechtenstein">Liechtenstein</input>
+                <input type="checkbox" value="Lithuania">Lithuania</input>
+                <input type="checkbox" value="Luxembourg">Luxembourg</input> <p />
+                <input type="checkbox" value="Macedonia">Macedonia</input>
+                <input type="checkbox" value="Madagascar">Madagascar</input>
+                <input type="checkbox" value="Malawi">Malawi</input>
+                <input type="checkbox" value="Malaysia">Malaysia</input>
+                <input type="checkbox" value="Maledives">Maledives</input>
+                <input type="checkbox" value="Mali">Mali</input>
+                <input type="checkbox" value="Malta">Malta</input>
+                <input type="checkbox" value="Marshall Islands">Marshall Islands</input>
+                <input type="checkbox" value="Mauritania">Mauritania</input>
+                <input type="checkbox" value="Mauritius">Mauritius</input>
+                <input type="checkbox" value="Mexico">Mexico</input>
+                <input type="checkbox" value="Micronesia">Micronesia</input>
+                <input type="checkbox" value="Monaco">Monaco</input>
+                <input type="checkbox" value="Mongolia">Mongolia</input>
+                <input type="checkbox" value="Montenegro">Montenegro</input>
+                <input type="checkbox" value="Morocco">Morocco</input>
+                <input type="checkbox" value="Mozambique">Mozambique</input>
+                <input type="checkbox" value="Myanmar">Myanmar</input> <p />
+                <input type="checkbox" value="Namibia">Namibia</input>
+                <input type="checkbox" value="Nauru">Nauru</input>
+                <input type="checkbox" value="Nepal">Nepal</input>
+                <input type="checkbox" value="Netherlands">Netherlands</input>
+                <input type="checkbox" value="New Zealand">New Zealand</input>
+                <input type="checkbox" value="Nicaragua">Nicaragua</input>
+                <input type="checkbox" value="Niger">Niger</input>
+                <input type="checkbox" value="Nigeria">Nigeria</input>
+                <input type="checkbox" value="Norway">Norway</input> <p />
+                <input type="checkbox" value="Oman">Oman</input> <p />
+                <input type="checkbox" value="Pakistan">Pakistan</input>
+                <input type="checkbox" value="Palau">Palau</input>
+                <input type="checkbox" value="Panama">Panama</input>
+                <input type="checkbox" value="Papua New Guinea">Papua New Guinea</input>
+                <input type="checkbox" value="Paraguay">Paraguay</input>
+                <input type="checkbox" value="Peru">Peru</input>
+                <input type="checkbox" value="Philippines">Philippines</input>
+                <input type="checkbox" value="Poland">Poland</input>
+                <input type="checkbox" value="Portugal">Portugal</input> <p />
+                <input type="checkbox" value="Qatar">Qatar</input> <p />
+                <input type="checkbox" value="Republic of Korea">Republic of Korea</input>
+                <input type="checkbox" value="Republic of Moldova">Republic of Moldova</input>
+                <input type="checkbox" value="Romania">Romania</input>
+                <input type="checkbox" value="Russia">Russia</input>
+                <input type="checkbox" value="Rwanda">Rwanda</input> <p />
+                <input type="checkbox" value="Saint Kitts and Nevis">Saint Kitts and Nevis</input>
+                <input type="checkbox" value="Saint Lucia">Saint Lucia</input>
+                <input type="checkbox" value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</input>
+                <input type="checkbox" value="Samoa">Samoa</input>
+                <input type="checkbox" value="San Marino">San Marino</input>
+                <input type="checkbox" value="São Tomé and Príncipe">São Tomé and Príncipe</input>
+                <input type="checkbox" value="Saudi Arabia">Saudi Arabia</input>
+                <input type="checkbox" value="Senegal">Senegal</input>
+                <input type="checkbox" value="Serbia">Serbia</input>
+                <input type="checkbox" value="Seychelles">Seychelles</input>
+                <input type="checkbox" value="Sierra Leone">Sierra Leone</input>
+                <input type="checkbox" value="Singapore">Singapore</input>
+                <input type="checkbox" value="Slovakia">Slovakia</input>
+                <input type="checkbox" value="Slovenia">Slovenia</input>
+                <input type="checkbox" value="Solomon Islands">Solomon Islands</input>
+                <input type="checkbox" value="Somalia">Somalia</input>
+                <input type="checkbox" value="South Africa">South Africa</input>
+                <input type="checkbox" value="South Sudan">South Sudan</input>
+                <input type="checkbox" value="Spain">Spain</input>
+                <input type="checkbox" value="Sri Lanka">Sri Lanka</input>
+                <input type="checkbox" value="Sudan">Sudan</input>
+                <input type="checkbox" value="Suriname">Suriname</input>
+                <input type="checkbox" value="Swaziland">Swaziland</input>
+                <input type="checkbox" value="Sweden">Sweden</input>
+                <input type="checkbox" value="Switzerland">Switzerland</input>
+                <input type="checkbox" value="Syrian Arab Republic">Syrian Arab Republic</input> <p />
+                <input type="checkbox" value="Tajikistan">Tajikistan</input>
+                <input type="checkbox" value="Thailand">Thailand</input>
+                <input type="checkbox" value="Timor-Leste">Timor-Leste</input>
+                <input type="checkbox" value="Togo">Togo</input>
+                <input type="checkbox" value="Tonga">Tonga</input>
+                <input type="checkbox" value="Trinidad and Tobago">Trinidad and Tobago</input>
+                <input type="checkbox" value="Tunisia">Tunisia</input>
+                <input type="checkbox" value="Turkey">Turkey</input>
+                <input type="checkbox" value="Turkmenistan">Turkmenistan</input>
+                <input type="checkbox" value="Tuvalu">Tuvalu</input> <p />
+                <input type="checkbox" value="Uganda">Uganda</input>
+                <input type="checkbox" value="Ukraine">Ukraine</input>
+                <input type="checkbox" value="United Arab Emirates">United Arab Emirates</input>
+                <input type="checkbox" value="United Kingdom">United Kingdom</input>
+                <input type="checkbox" value="United Republic of Tanazia">United Republic of Tanazia</input>
+                <input type="checkbox" value="Uruguay">Uruguay</input>
+                <input type="checkbox" value="USA">USA</input>
+                <input type="checkbox" value="Uzbekistan">Uzbekistan</input> <p />
+                <input type="checkbox" value="Vanuatu">Vanuatu</input>
+                <input type="checkbox" value="Venezuela">Venezuela</input>
+                <input type="checkbox" value="Vietnam">Vietnam</input> <p />
+                <input type="checkbox" value="Yemen">Yemen</input> <p />
+                <input type="checkbox" value="Zambia">Zambia</input>
+                <input type="checkbox" value="Zimbabwe">Zimbabwe</input>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="config.js" charset="utf-8"></script>
+  </body>
+</html>

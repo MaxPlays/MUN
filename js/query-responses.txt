@@ -10,3 +10,13 @@ action
   save:
     committee: Name of the committee
     data: List of data in the following format: [{"country":"country-name", "index":"speakers list index (-1 for not in speakers list)", "warns":"number of warns"}]
+  create:
+    data: Data of the committee that you want to Create
+
+      returns: "success" if successful, "Error: That committee name is already in use" if the name already exists, "Error" if a different error occurred
+  remove:
+    name: Name of the committee to be removed
+
+      returns: "success" if successful, "error" if an error has occurred
+  getTableInfo:
+    returns: JSON array with table-related information in the following format: [{"committee": "Name of the committee", "topicA": "Topic A", "topicB": "Topic B"}]

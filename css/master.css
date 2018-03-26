@@ -77,7 +77,8 @@ body{
 #speaking-country{
   font-size: 2em;
   background-color: #23262d;
-  padding: 10px 30px;;
+  padding: 10px 30px;
+  line-height: 1.7em;
 }
 #warnings{
   background-color: #23262d;
