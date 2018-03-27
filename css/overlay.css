@@ -52,6 +52,7 @@ Copyright 2018 Maximilian Negedly
 .ol-timer-wrapper{
   text-align: center;
   margin-top: 7%;
+  display: none;
 }
 #ol-timer, .ol-timer-unit{
   font-size: 1.4em;
@@ -78,4 +79,11 @@ Copyright 2018 Maximilian Negedly
 }
 .ol-red{
   color: red;
+}
+.ol-select-wrapper{
+  margin: auto;
+}
+.ol-select-wrapper > .ol-button{
+  display: inline-block;
+  margin: auto;
 }
