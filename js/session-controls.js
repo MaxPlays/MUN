@@ -13,14 +13,36 @@ Copyright 2018 Maximilian Negedly
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-$("#mc-button").click(function(){
-  $(".overlay-header").html("Moderated Caucus");
+$("#c-button").click(function(){
+  $(".overlay-header").html("Start Caucus");
   $(".overlay-wrapper").show();
+
+  $(".ol-select-wrapper").show();
+  $(".ol-timer-wrapper").hide();
+  $(".ol-vote-wrapper").hide();
+});
+
+$("#v-button").click(function(){
+  $(".overlay-header").html("Vote");
+  $(".overlay-wrapper").show();
+
+  $(".ol-select-wrapper").hide();
+  $(".ol-timer-wrapper").hide();
+  $(".ol-vote-wrapper").show();
+
+  startVote();
+});
+
+$("#mc-button").click(function(){
+  $(".ol-select-wrapper").hide();
+  $(".overlay-header").html("Moderated Caucus");
+  $(".ol-timer-wrapper").show();
 });
 
 $("#sc-button").click(function(){
+  $(".ol-select-wrapper").hide();
   $(".overlay-header").html("Simple Caucus");
-  $(".overlay-wrapper").show();
+  $(".ol-timer-wrapper").show();
 });
 
 window.onbeforeunload = function() {

@@ -139,7 +139,7 @@ body{
   #session-controls{
     margin-top: 30px;
   }
-  #mc-button, #sc-button, #end-session{
+  #c-button, #v-button, #end-session{
     display: inline-block;
     width: 130px;
     text-align: center;

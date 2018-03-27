@@ -29,7 +29,7 @@ Copyright 2018 Maximilian Negedly
 .overlay-content{
   margin: auto;
   width: 60%;
-  height: 40%;
+  min-height: 40%;
   background: white;
   margin-top: 30px;
   border-radius: 5px;
@@ -52,6 +52,7 @@ Copyright 2018 Maximilian Negedly
 .ol-timer-wrapper{
   text-align: center;
   margin-top: 7%;
+  display: none;
 }
 #ol-timer, .ol-timer-unit{
   font-size: 1.4em;
@@ -78,4 +79,52 @@ Copyright 2018 Maximilian Negedly
 }
 .ol-red{
   color: red;
+}
+.ol-select-wrapper{
+  margin: auto;
+}
+.ol-select-wrapper > .ol-button{
+  display: inline-block;
+  margin: auto;
+}
+.ol-vote-wrapper{
+  display: inline;
+}
+.ol-vote-button-wrapper{
+  text-align: center;
+  display: block;
+}
+.ol-vote-button-wrapper > .ol-button{
+  display: inline;
+}
+.vote-country{
+  text-align: center;
+  font-size: 1.5em;
+}
+.ol-list-wrapper{
+  display: inline-flex;
+  width: 100%;
+}
+.ol-list{
+  width: 100%;
+}
+.list-favour, .list-against, .list-abstain{
+  max-height: 30vh;
+  overflow-y: auto;
+}
+.list-entry{
+  font-size: 0.7em;
+}
+.num{
+  font-size: 0.7em;
+}
+@media(max-width: 1350px){
+  .overlay-content{
+    width: 70%;
+  }
+}
+@media(max-width: 1040px){
+  .overlay-content{
+    width: 90%;
+  }
 }
