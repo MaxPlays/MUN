@@ -29,6 +29,8 @@ $("#v-button").click(function(){
   $(".ol-select-wrapper").hide();
   $(".ol-timer-wrapper").hide();
   $(".ol-vote-wrapper").show();
+
+  startVote();
 });
 
 $("#mc-button").click(function(){

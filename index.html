@@ -55,7 +55,27 @@ Copyright 2018 Maximilian Negedly
           </div>
         </div>
         <div class="ol-vote-wrapper">
-          
+          <div class="vote-country">Austria</div> <br>
+          <div class="ol-vote-button-wrapper">
+            <div class="ol-button" id="button-favour">In favour</div>
+            <div class="ol-button" id="button-against">Against</div>
+            <div class="ol-button" id="button-abstain">Abstain</div>
+          </div>
+          <br>
+          <div class="ol-list-wrapper">
+            <div class="ol-list">
+            In favour <span class="num">(<span class="num-val" id="num-fav">0 [0%]</span>)</span>
+            <div class="list-favour"></div>
+            </div>
+            <div class="ol-list">
+              Against <span class="num">(<span class="num-val" id="num-ag">0 [0%]</span>)</span>
+              <div class="list-against"></div>
+            </div>
+            <div class="ol-list">
+              Abstentions <span class="num">(<span class="num-val" id="num-ab">0 [0%]</span>)</span>
+              <div class="list-abstain"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -151,5 +171,6 @@ Copyright 2018 Maximilian Negedly
   <script src="js/timer-ol.js" charset="utf-8"></script>
   <script src="js/session-controls.js" charset="utf-8"></script>
   <script src="js/menu.js" charset="utf-8"></script>
+  <script src="js/vote.js" charset="utf-8"></script>
   </body>
 </html>
